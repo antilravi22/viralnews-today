@@ -28,13 +28,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 		{
 			post(id: "http://www.digitalnagar.org.in" + encodeURI(path as string, idType: URI) {
 	id
-				excerpt
-				title
-				link
-				dateGmt
-				modifiedGmt
-				content
-				author	
+				
 
 			 {
 					node {
@@ -85,18 +79,7 @@ const Post: React.FC<PostProps> = (props) => {
 	return (
 		<>
 			<Head>
-				<meta property="og:title" content={post.title} />
-89
-                                <meta property="og:description" content={removeTags(post.excerpt)} />
-90
-                                <meta property="og:type" content="article" />
-91
-                                <meta property="og:locale" content="en_US" />
-92
-                                <meta property="og:site_name" content={host.split('.')[0]} />
-93
-                                <meta property="article:published_time" content={post.dateGmt} />
-94
+				
                                 <meta property="article:modified_time" content={post.modifiedGmt} />
 				<meta property="og:image" content={post.featuredImage.node.sourceUrl} />
 				<meta
