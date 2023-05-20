@@ -27,14 +27,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 	const query = gql`
 		{
 			post(id: "http://www.digitalnagar.org.in" + encodeURI(path as string, idType: URI) {
-				id
-				excerpt
-				title
-				link
-				dateGmt
-				modifiedGmt
-				content
-				author {
+				 {
 					node {
 						name
 					}
