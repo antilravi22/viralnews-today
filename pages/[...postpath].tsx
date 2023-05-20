@@ -19,14 +19,14 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 			redirect: {
 				permanent: false,
 				destination: `${
-					`http://www.digitalnagar.org.in/` + encodeURI(path as string)
+					`http://www.digitalnagar.org.in/` + encodeURI(path as string
 				}`,
 			},
 		};
 		}
 	const query = gql`
 		{
-			post(id: "/${path}/", idType: URI) {
+			post(id: "http://www.digitalnagar.org.in" + encodeURI(path as string, idType: URI) {
 				id
 				excerpt
 				title
